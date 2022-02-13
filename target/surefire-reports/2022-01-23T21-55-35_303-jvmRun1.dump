@@ -1,0 +1,48 @@
+# Created at 2022-01-23T21:55:36.156
+java.lang.TypeNotPresentException: Type [unknown] not present
+	at java.base/java.lang.reflect.Method.getDefaultValue(Method.java:682)
+	at java.base/sun.reflect.annotation.AnnotationType.<init>(AnnotationType.java:132)
+	at java.base/sun.reflect.annotation.AnnotationType.getInstance(AnnotationType.java:85)
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:267)
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:121)
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:73)
+	at java.base/java.lang.Class.createAnnotationData(Class.java:3757)
+	at java.base/java.lang.Class.annotationData(Class.java:3746)
+	at java.base/java.lang.Class.getAnnotation(Class.java:3651)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.hasJunit4RunWithAnnotation(TestNGDirectoryTestSuite.java:217)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.isJunit4Test(TestNGDirectoryTestSuite.java:212)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.isJUnitTest(TestNGDirectoryTestSuite.java:207)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
+Caused by: java.lang.NoClassDefFoundError: io/cucumber/core/backend/ObjectFactory
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.annotation.AnnotationParser.parseSig(AnnotationParser.java:440)
+	at java.base/sun.reflect.annotation.AnnotationParser.parseClassValue(AnnotationParser.java:421)
+	at java.base/sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:350)
+	at java.base/java.lang.reflect.Method.getDefaultValue(Method.java:674)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: io.cucumber.core.backend.ObjectFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 36 more
+
+
